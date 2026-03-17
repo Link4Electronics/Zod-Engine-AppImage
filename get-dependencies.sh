@@ -24,7 +24,8 @@ make-aur-package gtk2
 #make-aur-package gstreamer0.10
 #make-aur-package gstreamer0.10-base
 #make-aur-package gstreamer0.10-base-plugins
-make-aur-package wxgtk2.8-light
+#make-aur-package wxgtk2.8
+make-aur-package wxwidgets2.8-light
 make-aur-package libmysqlclient
 
 # If the application needs to be manually built that has to be done down here
