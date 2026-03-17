@@ -31,3 +31,5 @@ VERSION=2011-09-06
 echo "$VERSION" > ~/version
 
 bsdtar -xvf zod_linux-${VERSION}.tar.gz -C ./AppDir/bin --strip-components=1
+rm -rf ./AppDir/bin/zod_launcher_src
+rm -rf ./AppDir/bin/zod_src
