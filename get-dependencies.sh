@@ -12,24 +12,27 @@ tee -a /etc/pacman.conf <<EOF
 Include = /etc/pacman.d/mirrorlist
 EOF
 pacman -Syu --noconfirm \
-    cmake          \
-    gcc-libs       \
-    lib32-gcc-libs \
-    libdecor       \
-    mercurial      \
-    openmp         \
-    sdl12-compat   \
-    sdl_image      \
-    sdl_mixer      \
-    sdl_ttf
+    cmake            \
+    gcc-libs         \
+    gtk3             \
+    lib32-gcc-libs   \
+    libdecor         \
+    mercurial        \
+    openmp           \
+    sdl12-compat     \
+    sdl_image        \
+    sdl_mixer        \
+    sdl_ttf          \
+    wxwidgets-common \
+    wxwidgets-gtk3
 
 echo "Installing debloated packages..."
 echo "---------------------------------------------------------------"
 get-debloated-pkgs --add-common --prefer-nano
 
 # Comment this out if you need an AUR package
-make-aur-package gtk2
-make-aur-package wxwidgets2.8-light
+#make-aur-package gtk2
+#make-aur-package wxwidgets2.8-light
 make-aur-package mysql
 
 # If the application needs to be manually built that has to be done down here
